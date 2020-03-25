@@ -9,8 +9,20 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 
+// 在这里写JS
 export default {
   name: 'Home',
+  data(){
+    return{
+
+    }
+  },
+  computed: {
+
+  },
+  methods: {
+    
+  },
   components: {
     HelloWorld
   }

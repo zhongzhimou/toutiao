@@ -11,7 +11,16 @@ const routes = [
     path:'/login',
     // @代表src这个目录
     // .vue可以忽略
-    component:() => import('@/views/Login')
+    component: () => import('@/views/Login'),
+  },
+  {
+    path:'/register',
+    // @代表src这个目录
+    // .vue可以忽略
+    component: () => import('@/views/Register'),
+  },{
+    path:'/personal',
+    component:() => import('@/views/Personal')
   }
 ]
 

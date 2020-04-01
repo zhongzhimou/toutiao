@@ -2,13 +2,11 @@
   <!--      ------------------  个人首页  ------------------      -->
   <div class="container">
     <!-- 顶部导航栏 -->
-    <div class="navigate-bar">
-      <span class="iconfont iconjiantou2" @click="$router.back()"></span>
-      <strong>个人中心</strong>
-      <span class="iconfont iconshouye" @click="$router.push('/')"></span>
-    </div>
+    <NavigateBar title='个人中心' :showHome='true'/>
     <!-- 头部 -->
-    <div class="header">
+    <router-link to="/edit-profile">
+    <!-- @click="$router.push('/edit-profile')"   加上这个也可以跳转到编辑页 -->
+    <div class="header" >
       <!-- 头像 -->
       <div class="avatar">
         <img :src="$axios.defaults.baseURL + personal.head_img" />
@@ -27,6 +25,7 @@
       <!-- 图标 -->
       <span class="iconfont iconjiantou1"></span>
     </div>
+    </router-link>
     <!-- 列表栏 -->
     <!-- 遍历列表数据,使每一项的值都传入自定义属性中渲染到页面 -->
     <!-- 需要key,否则会报错 -->
@@ -39,6 +38,7 @@
 <script>
 // 导入列表组件
 import Listbar from "@/components/Listbar";
+import NavigateBar from "@/components/NavigateBar";
 import moment from "moment";
 export default {
   data() {
@@ -49,6 +49,7 @@ export default {
         { label: "我的跟帖", tips: "跟帖回复" },
         { label: "我的收藏", tips: "文章视频" }
       ],
+
       // 用来存储,缓存中的个人信息
       personal: {},
       // 日期插件中的moment,为了可以使用 需要绑定在data
@@ -93,7 +94,8 @@ export default {
     }
   },
   components: {
-    Listbar
+    Listbar,
+    NavigateBar
   }
 };
 </script>

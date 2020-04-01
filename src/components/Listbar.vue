@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 export default {
 
   props: ['aaa', 'bbb'],
@@ -28,7 +29,7 @@ export default {
   
 
  .listbar{
-   @px: 360 /100vw;
+   @px: 360 / 100vw;
     padding: 0 20/ @px;
     height: 48 / @px;
     line-height: 48 / @px;

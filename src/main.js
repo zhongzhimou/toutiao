@@ -24,7 +24,7 @@ Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
   // to要去的页面 from从哪里来 next放行 
   // $router.push  写法错误
-if(to.push=='/personal'){
+if(to.path=='/personal'){
   // 获取token值 同时还要转为对象 方便下一步做判断
   // 如果缓存中没有值也需要一个填入空对象   否则如果没有数据会返回null--null没有token属性,js会报错
   const userToken =JSON.parse(localStorage.getItem('userInfo')) || {};

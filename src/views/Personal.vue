@@ -83,8 +83,7 @@ export default {
         .confirm({
           title: "标题",
           message: "确定退出吗"
-        })
-        .then(() => {
+        }).then(() => {
           localStorage.removeItem('userInfo');
           this.$router.replace('/login')
         })

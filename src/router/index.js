@@ -27,7 +27,14 @@ const routes = [
     path:'/edit-profile',
     component:() => import('@/views/EditProfile')
   },
-  
+  {
+    path:'/comments',
+    component:() => import('@/views/Comments')
+  },
+  {
+    path:'/follow',
+    component:() => import('@/views/Follow')
+  },
 ]
 
 const router = new VueRouter({
